@@ -12,8 +12,8 @@ Plug 'vim-scripts/delimitMate.vim'
 Plug 'voldikss/vim-floaterm'
 "File browser
 Plug 'scrooloose/nerdtree'
-"C/C++ highlighting
-Plug 'octol/vim-cpp-enhanced-highlight'
+"language pack highlighting
+Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 let g:delimitMate_expand_cr = 2
@@ -30,4 +30,18 @@ let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
 let g:cpp_posix_standard = 1
+"mouse navigation
+set mouse=a
+
+"make cursor thin in insert mode
+if has("autocmd")
+  au VimEnter,InsertLeave * silent execute '!echo -ne "\e[2 q"' | redraw!
+  au InsertEnter,InsertChange *
+\ if v:insertmode == 'i' |
+\   silent execute '!echo -ne "\e[6 q"' | redraw! |
+\ elseif v:insertmode == 'r' |
+\   silent execute '!echo -ne "\e[4 q"' | redraw! |
+\ endif
+au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
+endif
 
