@@ -34,6 +34,10 @@ let g:cpp_class_decl_highlight = 1
 let g:cpp_posix_standard = 1
 
 
+" only enable Emmet for certain file types
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
+
 
 
 "mouse navigation
