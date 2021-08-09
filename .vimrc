@@ -18,10 +18,12 @@ call plug#end()
 
 let g:delimitMate_expand_cr = 2
 
+"floating terminal
 let g:floaterm_keymap_toggle = '<F12>'
 let g:floaterm_width = 0.9
 let g:floaterm_height = 0.9
 
+"nerd tree toggle
 map <F5> :NERDTreeToggle<CR>
 
 
@@ -30,8 +32,14 @@ let g:cpp_class_scope_highlight = 1
 let g:cpp_member_variable_highlight = 1
 let g:cpp_class_decl_highlight = 1
 let g:cpp_posix_standard = 1
+
+
+
+
 "mouse navigation
 set mouse=a
+set number
+
 
 "make cursor thin in insert mode
 if has("autocmd")
@@ -44,4 +52,6 @@ if has("autocmd")
 \ endif
 au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
 endif
+
+
 
