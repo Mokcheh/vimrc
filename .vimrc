@@ -1,7 +1,7 @@
 call plug#begin('~/.vim/plugged')
 
 
-" Use release branch (recommend)
+"LSP 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 "html emmet
@@ -14,6 +14,13 @@ Plug 'voldikss/vim-floaterm'
 Plug 'scrooloose/nerdtree'
 "language pack highlighting
 Plug 'sheerun/vim-polyglot'
+"vim airline/themes
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'keitanakamura/neodark.vim'
+
+"gitgutter
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 let g:delimitMate_expand_cr = 2
@@ -56,6 +63,11 @@ if has("autocmd")
 \ endif
 au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
 endif
+
+"some appearance crap
+let g:airline_theme = 'deus'
+let g:airline_powerline_fonts = 1
+colorscheme neodark
 
 
 
