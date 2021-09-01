@@ -1,3 +1,5 @@
+"requires Plug
+
 call plug#begin('~/.vim/plugged')
 
 
@@ -8,8 +10,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'mattn/emmet-vim'
 "brackets completion
 Plug 'vim-scripts/delimitMate.vim'
-"floating terminal
-Plug 'voldikss/vim-floaterm'
 "File browser
 Plug 'scrooloose/nerdtree'
 "language pack highlighting
@@ -24,11 +24,6 @@ Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 let g:delimitMate_expand_cr = 2
-
-"floating terminal
-let g:floaterm_keymap_toggle = '<F12>'
-let g:floaterm_width = 0.9
-let g:floaterm_height = 0.9
 
 "nerd tree toggle
 map <F5> :NERDTreeToggle<CR>
