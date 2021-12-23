@@ -6,6 +6,9 @@ call plug#begin('~/.vim/plugged')
 "LSP 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+"good parentheses yes
+"Plug 'junegunn/rainbow_parentheses.vim'
+Plug 'frazrepo/vim-rainbow'
 "html emmet
 Plug 'mattn/emmet-vim'
 "brackets completion
@@ -28,7 +31,8 @@ let g:delimitMate_expand_cr = 2
 "nerd tree toggle
 map <F5> :NERDTreeToggle<CR>
 
-
+"activate rainbow_parentheses
+"autocmd vimEnter * RainbowParentheses
 
 
 " only enable Emmet for certain file types
@@ -61,3 +65,16 @@ colorscheme neodark
 
 
 
+"autism
+
+let g:rainbow_active = 1
+
+let g:rainbow_load_separately = [
+    \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+    \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
+    \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+    \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
+    \ ]
+
+let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
+let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
