@@ -21,7 +21,6 @@ Plug 'sheerun/vim-polyglot'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'keitanakamura/neodark.vim'
-
 "gitgutter
 Plug 'airblade/vim-gitgutter'
 call plug#end()
@@ -39,7 +38,8 @@ map <F5> :NERDTreeToggle<CR>
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
-
+"set tabs to 4
+set tabstop=4
 
 "mouse navigation
 set mouse=a
@@ -59,11 +59,8 @@ au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
 endif
 
 "some appearance crap
-let g:airline_theme = 'deus'
-let g:airline_powerline_fonts = 1
-colorscheme neodark
-
-
+"let g:airline_theme = 'deus'
+"let g:airline_powerline_fonts = 1
 
 "autism
 
@@ -78,3 +75,9 @@ let g:rainbow_load_separately = [
 
 let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
 let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
+
+colorscheme neodark
+let g:airline_theme='onedark'
+let g:onedark_hide_endofbuffer = 1
+
+
